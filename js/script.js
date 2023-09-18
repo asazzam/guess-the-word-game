@@ -1,14 +1,16 @@
-const guessedLetters = document.querySelector(".guessed-letters");
-const button = document.querySelector(".guess");
-const textInput = document.querySelector("input");
+const guessedLettersElement = document.querySelector(".guessed-letters");
+const guessButton = document.querySelector(".guess");
+const letterInput = document.querySelector(".letter");
 const wordInProgress = document.querySelector(".word-in-progress");
 const remainingGuess = document.querySelector(".remaining");
-const remainingDisplay = document.querySelector("span");
+const remainingDisplay = document.querySelector(".remaining span");
 const message = document.querySelector(".message");
-const hiddenButton = document.querySelector(".play-again hide");
+const hiddenButton = document.querySelector(".play-again");
 
 const word = "magnolia";
+const guessedLetters = [];
 
+// Placeholder dots for the chosen word's letters
 const letterPlaceholder = function (word) {
   const placeholderLetters = [];
   for (const letter of word) {
@@ -20,10 +22,40 @@ const letterPlaceholder = function (word) {
 
 letterPlaceholder(word);
 
-button.addEventListener("click", function (e) {
+guessButton.addEventListener("click", function (e) {
   e.preventDefault();
+  // Empty message
+  message.innerText = "";
+  // Entered in the input
+  const guess = letterInput.value;
+  // Single letter?
+  const goodGuess = checkInput(guess);
 
-  const guess = textInput.value;
-  console.log(guess);
-  textInput.value = "";
+  if (goodGuess) {
+    makeGuess(guess);
+  }
+  letterInput.value = "";
 });
+
+const checkInput = function (input) {
+  const acceptedLetter = /[a - zA - Z]/;
+  if (input.length === 0) {
+    message.innerText = "Please enter a letter.";
+  } else if (input.length > 1) {
+    message.innerText = "Please only enter one letter at a time.";
+  } else if (!input.match(acceptedLetter)) {
+    message.innerText = "Please enter a letter from A to Z.";
+  } else {
+    return input;
+  }
+};
+
+const makeGuess = function (guess) {
+  guess = guess.toUpperCase();
+  if (guessedLetters.includes(guess)) {
+    message.innerText = "You've already guessed that letter! Please try again.";
+  } else {
+    guessedLetters.push(guess);
+    console.log(guessedLetters);
+  }
+};

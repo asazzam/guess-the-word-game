@@ -15,7 +15,7 @@ body {
   background-image: url("../img/bg.png");
   background-size: 800px;
   background-repeat: repeat;
-  color: #305050;
+  color: rgb(19, 133, 164);
 }
 
 .logo {
@@ -35,9 +35,11 @@ h1 {
 }
 
 .container {
-  background: radial-gradient(50% 50% at 50% 50%,
+  background: radial-gradient(
+    50% 50% at 50% 50%,
     rgba(167, 237, 237, 0.3) 0%,
-    rgba(156, 226, 226, 0) 100%);
+    rgba(156, 226, 226, 0) 100%
+  );
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -51,7 +53,7 @@ h1 {
 
 .highlight {
   padding: 0.25em;
-  background: #ffe2d6;
+  background: rgb(182, 232, 246);
   font-size: 1em;
 }
 
@@ -113,8 +115,8 @@ input:focus {
   padding: 1em 3em;
   border-radius: 50px;
   margin-top: 1em;
-  color: #fff;
-  background: #ff8d5c;
+  color: rgb(19, 133, 164);
+  background: rgb(231, 180, 226);
   font-size: 1em;
   align-self: center;
   outline: none;
@@ -137,7 +139,8 @@ input:focus {
 /* animatied background */
 .win {
   padding: 0 1em;
-  background: linear-gradient(-45deg, #ff9d64, #f5620c);
+  background: linear-gradient(-45deg, rgb(72, 199, 234), rgb(231, 180, 226)) 0%
+    0% / 400% 400%;
   background-size: 400% 400%;
   animation: gradient 2s ease infinite;
 }

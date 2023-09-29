@@ -51,12 +51,15 @@ h1 {
 }
 
 .highlight {
-  padding: 0.25em;
-  border-radius: 45px;
-  padding: 0 10px;
   font-size: 1em;
   font-family: "Titillium Web", sans-serif;
   color: #0c0b07;
+  padding: 0 0.25em;
+  background: linear-gradient(-46deg, rgb(243 242 157), rgb(246 246 226)) 0% 0% /
+    400% 400%;
+  border-radius: 35px;
+  background-size: 400% 400%;
+  animation: gradient 2s ease infinite;
 }
 
 .underline {
@@ -109,7 +112,7 @@ input {
 input:active,
 input:focus {
   outline: 0;
-  border: 4px solid #28bdbd;
+  border: 4px solid #dff6f6;
 }
 
 .guess,

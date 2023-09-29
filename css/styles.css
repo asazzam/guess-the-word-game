@@ -34,11 +34,11 @@ h1 {
 }
 
 .container {
-  background: radial-gradient(
+  /*background: radial-gradient(
     50% 50% at 50% 50%,
     rgba(229, 237, 167, 0.25) 0%,
     rgba(156, 226, 226, 0) 100%
-  );
+  );*/
   display: flex;
   justify-content: center;
   flex-direction: column;

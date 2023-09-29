@@ -13,8 +13,7 @@ body {
   line-height: 150%;
   background-color: #dff6f6;
   background-image: url("../img/starrysky.jpg");
-  background-size: 800px;
-  background-repeat: repeat;
+  background-repeat: cover;
   color: #e5e6e0;
 }
 
@@ -53,7 +52,6 @@ h1 {
 
 .highlight {
   padding: 0.25em;
-  background: #e5e6e0;
   border-radius: 45px;
   padding: 0 10px;
   font-size: 1em;
@@ -116,7 +114,7 @@ input:focus {
 
 .guess,
 .play-again {
-  padding: 1em 3em;
+  padding: 0.75em 1em;
   border-radius: 50px;
   margin-top: 1em;
   color: #0c0b07;
@@ -143,8 +141,9 @@ input:focus {
 /* animatied background */
 .win {
   padding: 0 1em;
-  background: linear-gradient(-46deg, rgb(245, 240, 221), rgb(229, 229, 224)) 0%
-    0% / 400% 400%;
+  background: linear-gradient(-46deg, rgb(243 242 157), rgb(246 246 226)) 0% 0% /
+    400% 400%;
+  border-radius: 35px;
   background-size: 400% 400%;
   animation: gradient 2s ease infinite;
 }

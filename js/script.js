@@ -94,7 +94,7 @@ const updateWord = function (guessedLetters) {
     if (guessedLetters.includes(letter)) {
       revealWord.push(letter.toUpperCase());
     } else {
-      revealWord.push("●");
+      revealWord.push("✶");
     }
   }
   wordInProgress.innerText = revealWord.join("");
